@@ -1,0 +1,30 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "geparcedemy"
+  description: "geparcedemy"
+  tags:
+    - java
+    - quarkus
+  links:
+    - url: https://devspaces.apps.control-cluster-raffa.demo.red-chesterfield.com/#https://github.com/raf-backstage-demo/geparcedemy?che-editor=che-incubator/che-code/insiders&devfilePath=.devfilev2-vscode.yaml
+      title: CodeReady Workspaces (VS Code)
+      icon: web    
+    - url: https://devspaces.apps.control-cluster-raffa.demo.red-chesterfield.com/#https://github.com/raf-backstage-demo/geparcedemy?che-editor=che-incubator/che-idea/next&devfilePath=.devfilev2-intellij.yaml
+      title: CodeReady Workspaces (JetBrains IntelliJ)
+      icon: web
+    - url: https://grafana-route-user-workload-grafana.apps.control-cluster-raffa.demo.red-chesterfield.com/d/AqEG4weWk/error-budget?orgId=1&refresh=5s&var-virtual_service=geparcedemy-stable.-prod.svc.cluster.local&var-time_interval=1h&var-SLO=95&var-latency=1000
+      title: SRE Metrics (production)
+      icon: web
+  annotations:
+    'github.com/project-slug': gattma/geparcedemy
+    'backstage.io/kubernetes-id': geparcedemy
+    'backstage.io/techdocs-ref': dir:.
+    'sonarqube.org/project-key': gattma_geparcedemy
+    'prometheus.io/alert': ErrorBudgetBurn-critical--prod-geparcedemy,ErrorBudgetBurn-warning--prod-geparcedemy
+    'prometheus.io/rule': virtual_service:_prod_geparcedemy:error_rate_1d,virtual_service:_prod_geparcedemy:error_rate_1h,virtual_service:_prod_geparcedemy:error_rate_2h,virtual_service:_prod_geparcedemy:error_rate_30m
+spec:
+  type: service
+  lifecycle: experimental
+  owner: "group:default/gepardec"
+  system: gepardemy

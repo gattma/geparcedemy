@@ -1,0 +1,8 @@
+site_name: "geparcedemy"
+site_description: "geparcedemy"
+
+nav:
+  - Introduction: index.md
+
+plugins:
+  - techdocs-core
