@@ -40,7 +40,7 @@ jobs:
         with:
           image: geparcedemy
           registry: ghcr.io
-          dockerfile: src/main/Dockerfile.jvm
+          dockerfile: src/main/docker/Dockerfile.jvm
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           # if the branch is main, add the latest tag
