@@ -23,6 +23,7 @@ metadata:
     'sonarqube.org/project-key': gattma_geparcedemy
     'prometheus.io/alert': ErrorBudgetBurn-critical--prod-geparcedemy,ErrorBudgetBurn-warning--prod-geparcedemy
     'prometheus.io/rule': virtual_service:_prod_geparcedemy:error_rate_1d,virtual_service:_prod_geparcedemy:error_rate_1h,virtual_service:_prod_geparcedemy:error_rate_2h,virtual_service:_prod_geparcedemy:error_rate_30m
+    'argocd/app-name': geparcedemy-dev
 spec:
   type: service
   lifecycle: experimental
