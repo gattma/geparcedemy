@@ -5,7 +5,8 @@
       "matchDepTypes": ["*quarkus*"],
       "matchUpdateTypes": ["major"],
       "groupName": "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}-test1",
-      "groupSlug": "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}-test"
+      "groupSlug": "{{{depNameSanitized}}}#{{currentVersion}}#{{newVersion}}-test",
+      "branchName": "{{groupSlug}}/{{depName}}"
     }
   ]
 }
